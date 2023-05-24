@@ -1,17 +1,12 @@
-document.addEventListener("keyup", e=>{
+const doc = document;
+const menuOpen = doc.querySelector(".menu");
+const menuClose = doc.querySelector(".close");
+const overlay = doc.querySelector(".overlay");
 
-    if (e.target.matches("#buscador")){
-  
-        if (e.key ==="Escape")e.target.value = ""
-  
-        document.querySelectorAll(".nav-item").forEach(Veiculo =>{
-  
-            Veiculo.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-              ?Veiculo.classList.remove("filtro")
-              :Veiculo.classList.add("filtro")
-        })
-  
-    }
-  
-  
-  })
+menuOpen.addEventListener("click", () => {
+  overlay.classList.add("overlay--active");
+});
+
+menuClose.addEventListener("click", () => {
+  overlay.classList.remove("overlay--active");
+});
