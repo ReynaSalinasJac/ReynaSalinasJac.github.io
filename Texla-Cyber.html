@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CyberTrock</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>CyberTrock</title>
+   </head>
+   <boby>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="PROYECTO-TEXLA.html"><img id="iimmgg" class="gimg" src="IMG/LogoTEXLA.png" alt="Texla"></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-ModelC.html">Model C</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-Model4.html">Model 4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-ModelZ.html">Model Z</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-ModelZX.html">Model ZX</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-Cyber.html">CyberTrock</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Sobre Texla.html"><b>SOBRE TEXLA</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Sobre Texla.html"><b>Inicia Secion</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Sobre Texla.html"><b>Registrate</b></a>
+            </li>
+            
+          </ul>
+          <div class="container mt-5">
+            <p>Buscador</p>
+            <input type="text" id="formulario" class="form-control my-0">
+            <button class="btn btn-info mb-2" id="boton">Buscar</button>
+            <ul id="resultado">
+                
+            </ul>
+        </div>
+    
+    
+        <script>
+    
+          const productos = [
+              
+              {nombre: 'Model C', valor: 500},
+              {nombre: 'Model 4', valor: 500},
+              {nombre: 'Model Z', valor: 500},
+              {nombre: 'Model ZX', valor: 500},
+              {nombre: 'Model Cyber', valor: 500},
+          ]
+    
+            const formulario = document.querySelector('#formulario');
+            const boton = document.querySelector('#boton');
+            const resultado = document.querySelector('#resultado')
+    
+            const filtrar = ()=>{
+              //console.log(formulario.value);
+              resultado.innerHTML = '';
+    
+              const texto = formulario.value.toLowerCase();
+              
+              for(let producto of productos){
+                let nombre = producto.nombre.toLowerCase();
+                if(nombre.indexOf(texto) !== -1){
+                    resultado.innerHTML += `
+                    <li>${producto.nombre} - valor: ${producto.valor}</li>
+                    `
+                }
+              }
+    
+              if(resultado.innerHTML === ''){
+                  resultado.innerHTML += `
+                    <li>Producto no encontrado...</li>
+                    `
+              }
+    
+            }
+    
+            boton.addEventListener('click', filtrar)
+            formulario.addEventListener('keyup', filtrar)
+    
+            
+    
+        </script>
+          <form class="d-flex" role="search">
+            
+          </form>
+        </div>
+      </div>
+    </nav>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://www.tesla.com/xNVh4yUEc3B9/03_Desktop.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="color: rgb(255, 255, 255);">El Model ZX es completamente eléctrico, por lo que nunca más tendrá que volver a visitar una estación de gasolina.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/0f22af4d-15e0-452d-ba66-1359490b4a0b/bvlatuR/std/2880x1800/Cybertruck-Hero-Desktop" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="color: rgb(0, 0, 0);">La seguridad es la parte más importante de cada Tesla. Diseñamos nuestros vehículos para superar los estándares de seguridad          </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay>
+              <source src="https://www.tesla.com/xNVh4yUEc3B9/performance_video_desktop.mp4" type="video/mp4"  alt="Video DEL TEXLAC">
+              <source src="Cyber.mp4" type="video/ogg">
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="color: rgb(255, 255, 255);">El Model ZX proporciona la máxima versatilidad: puede transportar hasta 7 pasajeros y su carga. Cada asiento de la segunda fila se puede plegar y quedar plano de forma independiente, lo que crea almacenamiento para muebles, maletas, palos de golf y más. La puerta de la cajuela se abre hacia arriba desde el nivel del piso, lo que permite una carga y descarga fácil y rápida.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+   </boby>
+</html>

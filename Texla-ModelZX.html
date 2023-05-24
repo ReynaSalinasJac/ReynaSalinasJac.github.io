@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Texla-ModelZX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Texla-ModelZX</title>
+   </head>
+   <boby>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="PROYECTO-TEXLA.html"><img id="iimmgg" class="gimg" src="IMG/LogoTEXLA.png" alt="Texla"></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-ModelC.html">Model C</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-Model4.html">Model 4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-ModelZ.html">Model Z</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-ModelZX.html">Model ZX</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-Cyber.html">CyberTrock</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Sobre Texla.html"><b>SOBRE TEXLA</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Sobre Texla.html"><b>Inicia Secion</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Sobre Texla.html"><b>Registrate</b></a>
+            </li>
+            
+          </ul>
+          <div class="container mt-5">
+            <p>Buscador</p>
+            <input type="text" id="formulario" class="form-control my-0">
+            <button class="btn btn-info mb-2" id="boton">Buscar</button>
+            <ul id="resultado">
+                
+            </ul>
+        </div>
+    
+    
+        <script>
+    
+          const productos = [
+              
+              {nombre: 'Model C', valor: 14425},
+              {nombre: 'Model 4', valor: 28715},
+              {nombre: 'Model Z', valor: 56481},
+              {nombre: 'Model ZX', valor: 42484},
+              {nombre: 'Model Cyber', valor: 35479},
+          ]
+    
+            const formulario = document.querySelector('#formulario');
+            const boton = document.querySelector('#boton');
+            const resultado = document.querySelector('#resultado')
+    
+            const filtrar = ()=>{
+              //console.log(formulario.value);
+              resultado.innerHTML = '';
+    
+              const texto = formulario.value.toLowerCase();
+              
+              for(let producto of productos){
+                let nombre = producto.nombre.toLowerCase();
+                if(nombre.indexOf(texto) !== -1){
+                    resultado.innerHTML += `
+                    <li>${producto.nombre} - valor: ${producto.valor}</li>
+                    `
+                }
+              }
+    
+              if(resultado.innerHTML === ''){
+                  resultado.innerHTML += `
+                    <li>Producto no encontrado...</li>
+                    `
+              }
+    
+            }
+    
+            boton.addEventListener('click', filtrar)
+            formulario.addEventListener('keyup', filtrar)
+    
+            
+    
+        </script>
+        </div>
+      </div>
+    </nav>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="IMG\Model ZX.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="color: rgb(255, 255, 255);">El Model ZX es completamente eléctrico, por lo que nunca más tendrá que volver a visitar una estación de gasolina.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://www.tesla.com/themes/custom/tesla_frontend/components/images/safety-model-y-hero.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="color: rgb(0, 0, 0);">La seguridad es la parte más importante de cada Tesla. Diseñamos nuestros vehículos para superar los estándares de seguridad          </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/93b81b8b-7c57-4065-9568-3755ce6c32d8/bvlatuR/std/1920x1080/_1D-Utility-B" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="color: rgb(255, 255, 255);">El Model ZX proporciona la máxima versatilidad: puede transportar hasta 7 pasajeros y su carga. Cada asiento de la segunda fila se puede plegar y quedar plano de forma independiente, lo que crea almacenamiento para muebles, maletas, palos de golf y más. La puerta de la cajuela se abre hacia arriba desde el nivel del piso, lo que permite una carga y descarga fácil y rápida.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+   </boby>
+</html>

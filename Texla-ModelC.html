@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Texla-ModelC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Texla-ModelC</title>
+   </head>
+   <boby>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="PROYECTO-TEXLA.html"><img id="iimmgg" class="gimg" src="IMG/LogoTEXLA.png" alt="Texla"></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-ModelC.html">Model C</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-Model4.html">Model 4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-ModelZ.html">Model Z</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-ModelZX.html">Model ZX</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Texla-Cyber.html">CyberTrock</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Sobre Texla.html"><b>SOBRE TEXLA</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Sobre Texla.html"><b>Inicia Secion</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Sobre Texla.html"><b>Registrate</b></a>
+            </li>
+            
+            
+          </ul>
+          <div class="container mt-5">
+            <p>Buscador</p>
+            <input type="text" id="formulario" class="form-control my-0">
+            <button class="btn btn-info mb-2" id="boton">Buscar</button>
+            <ul id="resultado">
+                
+            </ul>
+        </div>
+    
+    
+        <script>
+    
+          const productos = [
+              
+              {nombre: 'Model C', valor: 14425},
+              {nombre: 'Model 4', valor: 28715},
+              {nombre: 'Model Z', valor: 56481},
+              {nombre: 'Model ZX', valor: 42484},
+              {nombre: 'Model Cyber', valor: 35479},
+          ]
+    
+            const formulario = document.querySelector('#formulario');
+            const boton = document.querySelector('#boton');
+            const resultado = document.querySelector('#resultado')
+    
+            const filtrar = ()=>{
+              //console.log(formulario.value);
+              resultado.innerHTML = '';
+    
+              const texto = formulario.value.toLowerCase();
+              
+              for(let producto of productos){
+                let nombre = producto.nombre.toLowerCase();
+                if(nombre.indexOf(texto) !== -1){
+                    resultado.innerHTML += `
+                    <li>${producto.nombre} - valor: ${producto.valor}</li>
+                    `
+                }
+              }
+    
+              if(resultado.innerHTML === ''){
+                  resultado.innerHTML += `
+                    <li>Producto no encontrado...</li>
+                    `
+              }
+    
+            }
+    
+            boton.addEventListener('click', filtrar)
+            formulario.addEventListener('keyup', filtrar)
+    
+            
+    
+        </script>
+        </div>
+      </div>
+    </nav>
+
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="IMG\Texla-ModelC.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="color: rgb(255, 255, 255);">El Model C Plaid tiene la aceleración más rápida de cualquier vehículo en producción. La arquitectura de batería actualizada para todos los modelos del Model C permite recorridos consecutivos sin degradación del desempeño.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/c0c475f7-2856-46e1-87ab-dd67ec8dd43f/bvlatuR/std/2880x1800/MS-Interior-Hero-Desktop" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="color: rgb(255, 255, 255);" >Las plataformas del Model C unen las tecnologías de sistema de propulsión y batería para un performance, autonomía y eficiencia inigualables. La nueva arquitectura térmica del módulo y el paquete permite una carga más rápida y le brinda más potencia y resistencia en todas las condiciones.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay>
+              <source src="https://tesla-cdn.thron.com/static/TTVX74_Model-S-Interior-Carousel-1-Cinematic-Display-Desktop_2WLKVX.mp4?xseo=" type="video/mp4"  alt="Video DEL TEXLAC">
+              <source src="Texla.mp4" type="video/ogg">
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="color: rgb(255, 255, 255);" >El Motor Dual Tracción Integral desbloquea más autonomía que cualquier otro vehículo de nuestra alineación actual, con una potencia increíble y un control máximo.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+   </boby>
+</html>
